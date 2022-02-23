@@ -18,7 +18,7 @@ Open `nvim` and enter the following:
 ## Dependencies
 
   ```
-  unzip gh fd-find ripgrep xsel npm node pynvim
+  unzip gh fd-find ripgrep xsel npm node pynvim ueberzug
   ```
   
 ---
