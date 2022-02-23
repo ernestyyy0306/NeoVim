@@ -18,7 +18,7 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
--- Normal --
+--------------------- Normal ----------------------------------
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -40,17 +40,31 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Mouse left click insert_mode
-keymap("n", "<LeftMouse>", "<LeftMouse>i", opts)
+keymap("n", "<LeftMouse>", "<LeftMouse>a", opts)
 -- Mouse right click normal_mode
-keymap("n", "<RightMouse>", "<LeftMouse><ESC>", opts)
+keymap("n", "<RightMouse>", "<LeftMouse>", opts)
 
--- Insert --
+-- Save
+keymap("n", "<C-s>", "<ESC>:w<CR>a", opts)
+keymap("n", "<C-q>", "<ESC>:wq<CR>", opts)
+
+--------------------- Insert ----------------------------------
 -- Undo
 keymap("i","<C-z>","<ESC>ua", opts)
 -- Semicolon
 keymap("i","<C-j>", "<ESC>$a;<CR>", opts)
+-- Mouse right click normal_mode
+keymap("i", "<RightMouse>", "<ESC><LeftMouse>", opts)
+-- Save
+keymap("i", "<C-s>", "<ESC>:w<CR>a", opts)
+keymap("i", "<C-q>", "<ESC>:wq<CR>", opts)
+-- Carriage return
+keymap("i", "<C-k>", "<ESC>o",opts)
+-- Move
+keymap("i", "<C-l>", "<Right>", opts)
+keymap("i", "<C-h>", "<Left>", opts)
 
--- Visual --
+--------------------- Visual ----------------------------------
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -67,7 +81,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
+--------------------- Terminal --------------------------------
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)

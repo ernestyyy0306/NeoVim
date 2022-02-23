@@ -1,9 +1,11 @@
+local colors = require("tokyonight.colors").setup()
+
 require("scrollbar").setup({
     show = true,
     set_highlights = true,
     handle = {
         text = " ",
-        color = nil,
+        color = colors.bg_highlight,
         cterm = nil,
         highlight = "CursorColumn",
         hide_if_all_visible = true, -- Hides handle if all lines are visible
