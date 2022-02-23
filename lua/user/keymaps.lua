@@ -39,9 +39,16 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+-- Mouse left click insert_mode
+keymap("n", "<LeftMouse>", "<LeftMouse>i", opts)
+-- Mouse right click normal_mode
+keymap("n", "<RightMouse>", "<LeftMouse><ESC>", opts)
+
 -- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- Undo
+keymap("i","<C-z>","<ESC>ua", opts)
+-- Semicolon
+keymap("i","<C-j>", "<ESC>$a;<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
