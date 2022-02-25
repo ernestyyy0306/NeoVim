@@ -45,7 +45,7 @@ keymap("n", "<LeftMouse>", "<LeftMouse>a", opts)
 keymap("n", "<RightMouse>", "<LeftMouse>", opts)
 
 -- Save
-keymap("n", "<C-s>", "<ESC>:w<CR>a", opts)
+keymap("n", "<C-s>", "<ESC>:w<CR>", opts)
 keymap("n", "<C-q>", "<ESC>:wq<CR>", opts)
 
 --------------------- Insert ----------------------------------
@@ -59,10 +59,13 @@ keymap("i", "<RightMouse>", "<ESC><LeftMouse>", opts)
 keymap("i", "<C-s>", "<ESC>:w<CR>a", opts)
 keymap("i", "<C-q>", "<ESC>:wq<CR>", opts)
 -- Carriage return
-keymap("i", "<C-k>", "<ESC>o",opts)
+keymap("i", "<C-f>", "<ESC>o",opts)
+keymap("i", "<C-d>", "<ESC>$a;<CR>",opts)
 -- Move
 keymap("i", "<C-l>", "<Right>", opts)
 keymap("i", "<C-h>", "<Left>", opts)
+keymap("i", "<C-j>", "<Up>", opts)
+keymap("i", "<C-k>", "<Down>", opts)
 
 --------------------- Visual ----------------------------------
 -- Stay in indent mode
