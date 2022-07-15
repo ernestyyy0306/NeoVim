@@ -18,11 +18,9 @@ Open `nvim` and enter the following:
 ## Dependencies
 
   ```
-  unzip gh fd-find ripgrep xsel npm node pynvim ueberzug
+  sudo apt install unzip fd-find ripgrep xsel npm xorg openbox python3-pip libx11-dev libxext-dev
+  pip3 install pynvim 
+  pip3 install ueberzug
+  gh - https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+  node - https://github.com/Schniz/fnm
   ```
-  
----
-
-**NOTE** 
-
-Make sure have [node](https://nodejs.org/en/) installed, recommend a node manager like [fnm](https://github.com/Schniz/fnm).
