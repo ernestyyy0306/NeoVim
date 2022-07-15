@@ -24,4 +24,5 @@ Open `nvim` and enter the following:
 ---
 
 **NOTE** 
+
 Make sure have [node](https://nodejs.org/en/) installed, recommend a node manager like [fnm](https://github.com/Schniz/fnm).
