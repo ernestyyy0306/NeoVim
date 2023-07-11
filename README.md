@@ -51,3 +51,16 @@ Open `nvim` and enter the following:
   gh - https://github.com/cli/cli/blob/trunk/docs/install_linux.md
   node - https://github.com/Schniz/fnm
 ```
+
+## MacOS
+
+```
+  ## Colorize the ls output ##
+  alias ls='ls --color=auto'
+
+  ## Use a long listing format ##
+  alias ll='ls -l'
+
+  ## Show hidden files ##
+  alias la='ls -la --color=auto'
+```
